@@ -1,0 +1,30 @@
+<!--继承-->
+{% extends 'base.html' %}
+
+{% block title %} 商品详情 {% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login_regist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+{% endblock %}
+
+{% block main %}
+    <h3 class="page-title">{{ goods.gname }}</h3>
+    <hr>
+    <div class="detail-div">
+    <img src="/static/images/{{ goods.pic }}" >
+    <p>{{ goods.introduction }}</p>
+    <span class="price">￥{{ goods.price }}</span>
+        <!--购买按钮-->
+        <form action="" method="POST">
+        <input class="button" name="buy" value="购买" type="submit">
+        </form>
+    {% if buy %}
+    <p><strong>系统提示:您已购买{{ goods.gname }},账户余额为{{ user.money }}{{ history }}</strong>
+    {% endif %}
+    {% if error %}
+    <p><strong>error:购买失败,{{ error }}</strong>
+    {% endif %}
+    </div>
+{% endblock %}.

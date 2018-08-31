@@ -1,0 +1,99 @@
+<!--继承-->
+{% extends 'base.html' %}
+
+{% block title %} 首页 {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+
+{% block main %}
+    <h2 class="index-title">V0WShop-网罗全球好货</h2>
+  <div class="box">
+      <div class="head">
+         <span>商品列表</span>
+         <a href="">更多></a>
+      </div>
+  <!-- 图片内容 -->
+  <ul>
+    <li>
+      <div class="deatil">
+         <h2>iphone X</h2>
+          <p>CPU品牌:Apple/苹果<br>Apple型号:iPhone X<br>机身颜色：银色 深空灰色</p>
+         <a href="/detail/1">查看详情</a>
+      </div>
+      <img src="/static/images/1.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥6666</p>
+      </div>
+    </li>
+
+    <!--第二个图片-->
+  <li>
+      <div class="deatil">
+         <h2>MacBook Pro</h2>
+         <p>Apple/苹果 13英寸：MacBook Pro 128GB轻薄学生商务办公I5超薄电脑</p>
+         <a href="/detail/2">查看详情</a>
+      </div>
+      <img src="/static/images/2.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥8888</p>
+      </div>
+    </li>
+
+      <!--第3个图片-->
+  <li>
+      <div class="deatil">
+         <h2>智能专业遥控无人机</h2>
+         <p>智能双GPS定位 返航 专业无人机 高清航拍 遥控飞机4K四轴飞行器</p>
+         <a href="/detail/3">查看详情</a>
+      </div>
+      <img src="/static/images/3.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥777</p>
+      </div>
+    </li>
+
+      <!--第4个图片-->
+  <li>
+      <div class="deatil">
+         <h2>ins 最火长袖T恤</h2>
+         <p>秋季潮牌韩版潮流 宽松ins长袖T恤 男嘻哈运动衣服 套头bf风 休闲上衣</p>
+         <a href="/detail/4">查看详情</a>
+      </div>
+      <img src="/static/images/4.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥88</p>
+      </div>
+    </li>
+
+
+      <!--第5个图片-->
+  <li>
+      <div class="deatil">
+         <h2>MAC mini口红套装礼物chili</h2>
+         <p>【限量100套】MAC/魅可迷你唇膏套组5支装 mini口红套装礼物chili </p>
+         <a href="/detail/5">查看详情</a>
+      </div>
+      <img src="/static/images/5.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥520</p>
+      </div>
+    </li>
+
+      <!--第6个图片-->
+  <li>
+      <div class="deatil">
+         <h2>Nike AJ11</h2>
+         <p>专柜正品耐克Air Jordan 11 UNC AJ11乔11午夜蓝高帮篮球鞋378037  </p>
+         <a href="/detail/6">查看详情</a>
+      </div>
+      <img src="/static/images/6.jpg" width="200px" height="220px" alt=""/>
+      <div class="price">
+        <p>￥998</p>
+      </div>
+    </li>
+
+  </ul>
+  </div>
+{% endblock %}

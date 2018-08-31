@@ -1,0 +1,33 @@
+<!--继承-->
+{% extends 'base.html' %}
+
+{% block title %} 个人中心 {% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/login_regist.css') }}">
+{% endblock %}
+
+{% block main %}
+<h3 class="page-title">个人信息</h3>
+<div class="form-container">
+    <h4>账户余额：{{ user.money }}</h4>
+        <h4>用户名：{{ user.username }}</h4>
+    <h4>手机号码：{{ user.tel }}</h4>
+        <form action="" method="POST" class="form-group">
+    <input type="text" class="form-control" placeholder="充值金额" name="money">
+    <input type="submit"  name="kejin" value="立即充值" class="btn btn-primary btn-block" />
+    </form>
+    <p><strong>修改密码</strong></p>
+    <form action="" method="POST" class="form-group">
+        <input type="password" class="form-control" placeholder="原密码" name="old">
+        <input type="password" class="form-control" placeholder="新密码" name="password1">
+        <input type="password" class="form-control" placeholder="确认密码" name="password2">
+        <input type="submit" name="gaimi" value="修改密码" class="btn btn-primary btn-block" />
+    </form>
+    {% if error %}
+    <p class=error><strong>系统提示:</strong> {{ error }}
+    {% endif %}
+</div>
+{% endblock %}
+
+
